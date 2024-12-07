@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-VariableFont_slnt-wght.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --bg-main: hsl(0, 0%, 8%);
+  --bg-div: hsl(0, 0%, 12%);
+  --bg-div-hov: hsl(75, 94%, 57%);
+  --bg-div-active: hsl(75, 60%, 48%);
+  --bg-button: hsl(0, 0%, 20%);
+  --font-color: hsl(0, 0%, 100%);
+  --accent-font: hsl(75, 94%, 57%);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: var(--bg-main);
+  color: var(--font-color);
+  font-family: "Inter";
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-div);
+  text-align: center;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  width: 80%;
+  max-width: 370px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero > img {
+  border-radius: 100%;
+  margin-bottom: 1.5rem;
+}
+.hero > h1 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-weight: 1rem;
+}
+.hero > p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-font);
+  margin-bottom: 1.5rem;
+}
+
+.card > p {
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+a:not(.attribution a) {
+  padding: 1rem;
+  display: block;
+  text-decoration: none;
+  color: var(--font-color);
+  background-color: var(--bg-button);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+a:not(.attribution a):hover {
+  background-color: var(--bg-div-hov);
+  color: var(--bg-div);
+  transform: translate(2px, 2px);
+}
+
+a:not(.attribution a):active {
+  background-color: var(--bg-div-active);
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    padding: 3rem 2rem; /* Slightly larger padding for larger screens */
+  }
+}
